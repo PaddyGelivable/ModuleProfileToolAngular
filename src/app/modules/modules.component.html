@@ -1,0 +1,24 @@
+<table class="table  table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Vendor Name</th>
+      <th scope="col">Module ID</th>
+      <th scope="col">Product Code</th>
+      <th scope="col">Catalog Name</th>
+      <th scope="col">Module Revision</th>
+      <th scope="col">Profile Revision</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let mod of moduleList" [class.selected]="mod === currentModule">
+      <td (click)="onSelect(mod)">{{mod.VendorName}}</td>
+      <td (click)="onSelect(mod)">{{mod.ModuleID}}</td>
+      <td (click)="onSelect(mod)">{{mod.ProductCode}}</td>
+      <td (click)="onSelect(mod)">{{mod.CatalogName}}</td>
+      <td (click)="onSelect(mod)">{{mod.ModuleRevision}}</td>
+      <td (click)="onSelect(mod)">{{mod.ProfileRevision}}</td>
+      <td><span><button title="Edit Module" routerLink="/detail/{{mod.Id}}" class="btn btn-sm btn-primary">E</button></span><span style="margin-left: 5px"><button title="Delete Module" (click)="onDelete(mod.Id)" class="btn btn-sm btn-danger">X</button></span></td>
+    </tr>
+  </tbody>
+</table>
