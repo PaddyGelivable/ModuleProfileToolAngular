@@ -1,34 +1,34 @@
 <hr>
 <form #form="ngForm" autocomplete="off">
-  <input type="hidden" name="ModuleID" [(ngModel)]="selectedModule.ModuleID">
+  <input type="hidden" name="ModuleID" [(ngModel)]="moduleService.currentSelectedModule.ModuleID">
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputVendorName">Vendor Name</label>
-      <input name="VendorName" #VendorName="ngModel" class="form-control" id="inputVendorName" [(ngModel)]="selectedModule.VendorName" required>
+      <input name="VendorName" #VendorName="ngModel" class="form-control" id="inputVendorName" [(ngModel)]="moduleService.currentSelectedModule.VendorName" required>
     </div>
     <div class="form-group col-md-6">
       <label for="inputModuleID">Module ID</label>
-      <input name="ModuleID" #ModuleID="ngModel" class="form-control" id="inputModuleID" [(ngModel)]="selectedModule.ModuleID" required>
+      <input name="ModuleID" #ModuleID="ngModel" class="form-control" id="inputModuleID" [(ngModel)]="moduleService.currentSelectedModule.ModuleID" required>
     </div>
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputProductCode">Product Code</label>
-      <input name="ProductCode" #ProductCode="ngModel" class="form-control" id="inputProductCode" [(ngModel)]="selectedModule.ProductCode" required>
+      <input name="ProductCode" #ProductCode="ngModel" class="form-control" id="inputProductCode" [(ngModel)]="moduleService.currentSelectedModule.ProductCode" required>
     </div>
     <div class="form-group col-md-6">
       <label for="inputCatalogName">Catalog Name</label>
-      <input name="CatalogName" #CatalogName="ngModel" class="form-control" id="inputCatalogName" [(ngModel)]="selectedModule.CatalogName" required>
+      <input name="CatalogName" #CatalogName="ngModel" class="form-control" id="inputCatalogName" [(ngModel)]="moduleService.currentSelectedModule.CatalogName" required>
     </div>
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputModuleRevision">Module Revision</label>
-      <input name="ModuleRevision" #ModuleRevision="ngModel" class="form-control" id="inputModuleRevision" [(ngModel)]="selectedModule.ModuleRevision" required>
+      <input name="ModuleRevision" #ModuleRevision="ngModel" class="form-control" id="inputModuleRevision" [(ngModel)]="moduleService.currentSelectedModule.ModuleRevision" required>
     </div>
     <div class="form-group col-md-6">
       <label for="inputProfileRevision">Profile Revision</label>
-      <input name="ProfileRevision" #ProfileRevision="ngModel" class="form-control" id="inputProfileRevision" [(ngModel)]="selectedModule.ProfileRevision" required>
+      <input name="ProfileRevision" #ProfileRevision="ngModel" class="form-control" id="inputProfileRevision" [(ngModel)]="moduleService.currentSelectedModule.ProfileRevision" required>
     </div>
   </div>
   <div class="form-row">

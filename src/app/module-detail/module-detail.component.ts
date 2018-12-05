@@ -3,7 +3,6 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { ModuleService }  from '../shared/module.service';
-import { Module } from '../shared/module.model';
 
 @Component({
   selector: 'app-module-detail',
@@ -12,11 +11,9 @@ import { Module } from '../shared/module.model';
 })
 export class ModuleDetailComponent implements OnInit {
 
-  selectedModule: Module;
-
   constructor(
     private route: ActivatedRoute,
-    private moduleService: ModuleService,
+    public moduleService: ModuleService,
     private location: Location
   ) {}
 
@@ -26,7 +23,7 @@ export class ModuleDetailComponent implements OnInit {
 
   getHero(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.selectedModule = this.moduleService.getModule(id);
+    this.moduleService.currentSelectedModule = Object.assign({}, this.moduleService.getModule(id));
   }
 
   goBack(): void {
