@@ -11,6 +11,8 @@ import { ModuleService }  from '../shared/module.service';
 })
 export class ModuleDetailComponent implements OnInit {
 
+  createNewModule: boolean;
+
   constructor(
     private route: ActivatedRoute,
     public moduleService: ModuleService,
@@ -23,6 +25,13 @@ export class ModuleDetailComponent implements OnInit {
 
   getHero(): void {
     const id = +this.route.snapshot.paramMap.get('id');
+
+    if(id === 0){
+      this.createNewModule = true;
+    }
+    else{
+      this.createNewModule = false;
+    }
     this.moduleService.currentSelectedModule = Object.assign({}, this.moduleService.getModule(id));
   }
 

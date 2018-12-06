@@ -2,15 +2,15 @@
   <br>
   <div class="form-row">
     <div class="form-group col-md-2">
-      <button  class="btn btn-primary btn-block">Create Module</button>
+      <button title="Create an UP or Expansion module" routerLink="/newModules" class="btn btn-primary btn-block">Create Module</button>
     </div>
     <div class="form-group col-md-6">
     </div>
     <div class="form-group col-md-2">
-      <button  class="btn btn-primary btn-block">Import</button>
+      <button title="Import a module from local disk" class="btn btn-primary btn-block">Import</button>
     </div>
     <div class="form-group col-md-2">
-      <button  class="btn btn-primary btn-block">Download</button>
+      <button [disabled]="!currentModule" title="Download a module to local disk" class="btn btn-primary btn-block">Download</button>
     </div>
   </div>
   <table class="table table-hover">

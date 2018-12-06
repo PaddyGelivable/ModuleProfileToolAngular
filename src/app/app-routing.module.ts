@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'modules', component: ModulesComponent },
   { path: '', redirectTo: '/modules', pathMatch: 'full' },
   { path: 'detail/:id', component: ModuleDetailComponent },
+  { path: 'newModules', component: ModuleDetailComponent }
 ];
 
 @NgModule({
