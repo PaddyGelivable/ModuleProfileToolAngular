@@ -33,7 +33,7 @@
         <td (click)="onSelect(mod)">{{mod.CatalogName}}</td>
         <td (click)="onSelect(mod)">{{mod.ModuleRevision}}</td>
         <td (click)="onSelect(mod)">{{mod.ProfileRevision}}</td>
-        <td><span><button title="Edit Module" routerLink="/detail/{{mod.Id}}" class="btn btn-sm btn-primary">E</button></span><span style="margin-left: 5px"><button title="Delete Module" (click)="onDelete(mod.Id)" class="btn btn-sm btn-danger">X</button></span></td>
+        <td><span style="margin-left: 5px"><button title="Edit Module" routerLink="/detail/{{mod.Id}}" class="btn btn-sm btn-primary">E</button></span><span style="margin-left: 5px"><button title="Delete Module" (click)="onDelete(mod.Id)" class="btn btn-sm btn-danger">X</button></span></td>
       </tr>
     </tbody>
   </table>

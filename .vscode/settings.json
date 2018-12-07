@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/90ba68f7-ce3f-4887-938d-6afd0d73aeae/resourceGroups/ModuleProfileToolResourceGroup/providers/Microsoft.Web/sites/ModuleProfileTool",
+    "appService.deploySubpath": "dist\\moduleprofiletool"
+}
